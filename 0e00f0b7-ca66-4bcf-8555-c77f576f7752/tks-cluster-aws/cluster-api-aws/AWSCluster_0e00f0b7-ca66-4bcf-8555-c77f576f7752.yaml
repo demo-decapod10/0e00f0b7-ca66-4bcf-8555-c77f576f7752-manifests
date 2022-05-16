@@ -1,0 +1,15 @@
+# Source: cluster-api-aws/templates/aws-cluster.yaml
+apiVersion: infrastructure.cluster.x-k8s.io/v1beta1
+kind: AWSCluster
+metadata:
+  name: 0e00f0b7-ca66-4bcf-8555-c77f576f7752
+  namespace: 0e00f0b7-ca66-4bcf-8555-c77f576f7752
+spec:
+  region: ap-northeast-2
+  sshKeyName: tks-seoul
+  bastion:
+    enabled: true
+    instanceType: t3.micro
+    disableIngressRules: false
+    allowedCIDRBlocks:
+      - 127.0.0.1/32
